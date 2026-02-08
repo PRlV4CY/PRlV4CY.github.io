@@ -5,7 +5,8 @@ const data = {
             description: "",
             info: "",
             img: "",
-            technology: "",
+            stack: [""],
+            live: "",
             code_link: "",
         },
         
@@ -14,7 +15,8 @@ const data = {
             description: "",
             info: "",
             img: "",
-            technology: "",
+            stack: [""],
+            live: "",
             code_link: "",
         },
     ],
@@ -22,7 +24,7 @@ const data = {
     about: "",
     img: "",
 
-    contact: [
+    contacts: [
         {
             title: "",
             link: "",
@@ -44,3 +46,5 @@ const data = {
         },
     ],
 }
+
+module.exports = data;

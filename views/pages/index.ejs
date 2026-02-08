@@ -1,0 +1,49 @@
+<%- include('../components/head') %>
+<%- include('../components/header') %>
+<main>
+    <section class="projects" id="projects">
+        <h2 class="title-section">Projects</h2>
+        <div class="projects-grid">
+            <% projects.forEach((project) => { %>
+                <div class="project-card" data-project-id="<%= project.title %>">
+                    <h3 class="project-title"><%= project.title %></h3>
+                    <p class="project-description"><%= project.description.substring(0, 100) %>...</p>
+                </div>
+            <% }) %>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <h2 class="title-section">About</h2>
+        <div class="about-grid">
+            <div class="about-img">
+                <img src="./img/<%= img %>" alt="image">
+            </div>
+            <p class="about-me"><%= about %></p>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2 class="title-section">Contact</h2>
+        <div class="contact-grid">
+            <% contacts.forEach((contact) => { %>
+                <div class="contact-card">
+                    <h3 class="contact-title"><%= contact.title %></h3>
+                    <a href="<%= contact.link %>"><%= contact.link %></a>
+                </div>
+            <% }) %>
+        </div>
+    </section>
+</main>
+
+<div class="model" id="project-model">
+    <div class="model-overlay"></div>
+    <div class="model-content">
+        <button class="close-model"></button>
+        <div id="project-model-content"></div>
+    </div>
+</div>
+
+<script src="/js/model.js"></script>
+
+<%- include('../components/footer') %>

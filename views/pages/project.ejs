@@ -3,18 +3,18 @@
         <h1 class="title-project"><%= project.title %></h1>
         <p class="project-info"><%= project.info %></p>
         <ul class="project-stack-list">
-            <% projects.stack.forEach((stack) => { %>
+            <% project.stack.forEach((stack) => { %>
                 <li class="project-item">
                     <p class="project-stack"><%= stack %></p>
                 </li>
             <% }) %>
         </ul>
         <div class="project-model-img">
-            <img src="./img/<%= project.img %>" alt="project image">
+            <img src="/media/img/<%= project.img %>" alt="project image">
         </div>
         <div class="project-model-links">
             <a href="<%= project.live %>">Live</a>
-            <a href="<%= project.code_link">Code</a>
+            <a href="<%= project.code_link %>">Code</a>
         </div>
     </div>
 </div>

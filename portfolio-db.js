@@ -18,7 +18,7 @@ function getContacts() {
 
 function searchProject(title) {
     return db.projects.find((project) => {
-        project.title === title
+        return project.title === title
     })
 }
 

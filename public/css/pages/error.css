@@ -1,0 +1,78 @@
+.error-grid {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background: var(--bg-primary);
+}
+
+.error-container {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    background: rgba(15, 23, 42, 0.7);
+    backdrop-filter: blur(10px);
+    padding: 3rem;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: var(--shadow);
+    max-width: 600px;
+    width: 100%;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.code-error {
+    font-size: 8rem;
+    font-weight: 800;
+    margin: 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f56565 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.error-message {
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+    margin: 1.5rem 0 2.5rem;
+    line-height: 1.6;
+}
+
+.error-container a {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background: var(--gradient);
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.error-container a:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+}
+
+@media (max-width: 768px) {
+    .code-error {
+        font-size: 6rem;
+    }
+    
+    .error-message {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .code-error {
+        font-size: 4rem;
+    }
+    
+    .error-message {
+        font-size: 1rem;
+    }
+}
